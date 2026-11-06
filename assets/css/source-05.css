@@ -1,0 +1,51 @@
+/*-------------------------------------------------------
+Theme Name: Divi Child Theme
+Theme URI: https://worshiptimes.org
+Description: A child theme of Divi for the Worship Times WT5.0 Network
+Author: Divi and Michael Gyura
+Author URI: https://worshiptimes.org
+Template: Divi
+Version: 1.1.10
+----------------- ADDITIONAL CSS HERE ------------------*/
+
+body.search .wt_search_bar {
+    margin: 20px 30px 90px 30px;
+    padding: 10px;
+}
+
+body #footer-info {
+    display: none;
+}
+
+/* Canvas Styles WT010180207 */
+
+body.WT010180207 #footer-bottom p,
+body.WT010180207 #footer-bottom {
+    color: #afadae;
+}
+
+/* Germantown Styles WT002210409 */
+body.WT002210409.single-wt_our_staff .post-meta {
+    display: none;
+}
+
+/* Leaflet map pin markers (replaces Google Maps on frontend) */
+.wt-divi-map-pin {
+    background: none !important;
+    border: none !important;
+}
+
+/* Keep Leaflet's layers (z-index 400 and 1000) inside the map box, under sticky headers */
+.leaflet-container {
+    isolation: isolate;
+}
+
+.leaflet-popup-content p {
+    margin: 0 0 5px;
+}
+
+/* Ensure Divi map containers work with Leaflet */
+.et_pb_map {
+    z-index: 1;
+}
+

@@ -1,0 +1,15 @@
+/* Keep source-theme animations visible when previewed without WordPress. */
+html {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.et_animated,
+.et-waypoint {
+    opacity: 1 !important;
+}
+
+.preview-form-message {
+    margin-top: 12px;
+    font-weight: 600;
+}

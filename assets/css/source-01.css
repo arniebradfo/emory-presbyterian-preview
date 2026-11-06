@@ -1,0 +1,192 @@
+.wt26-footer {
+    /* Start below any float the theme's footer leaves open. The footer is moved
+       into the theme's <footer>, and its flex row otherwise squeezes in beside
+       such a float (a Divi Theme Builder footer did this: 216px, far right). 1.9.93 */
+    clear: both;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/*
+ * Links are BOLD, not underlined; the underline is kept for hover and focus.
+ * Staff request 2026-08-25: the footer packs three or four links into three
+ * closely-set lines, and an underline beneath every one of them made the block
+ * hard to read. Weight is a non-colour distinction, so the links stay
+ * identifiable without the rule (the text colour is `inherit`, so colour alone
+ * never distinguished them and could not satisfy WCAG 1.4.1 on its own).
+ * Keyboard users gain: :focus used to REMOVE the underline, leaving a focused
+ * link looking like plain text; it now adds one.
+ *
+ * SPECIFICITY. The class is doubled to (0,2,1) for the same reason the Genesis
+ * band rule in includes/footer.php is: footer.css is enqueued BEFORE the active
+ * theme's stylesheet, so an equal-specificity theme rule setting
+ * `text-decoration: underline` would win the tie on load order and re-underline
+ * everything. (0,2,1) clears the single-class and body-class rules themes
+ * actually ship, while still losing to a customer's own Additional CSS.
+ */
+.wt26-footer.wt26-footer a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.wt26-footer.wt26-footer a:hover,
+.wt26-footer.wt26-footer a:focus {
+    text-decoration: underline;
+}
+
+.wt26-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wt26-footer__text {
+    flex: 1 1 auto;
+}
+
+.wt26-footer__logo {
+    flex: 0 0 130px;
+    width: 130px;
+}
+
+.wt26-footer .wt26-footer__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.wt26-footer__edit-link {
+    margin-left: 6px;
+}
+
+.wt26-footer__debug {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.wt26-footer__debug-title {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/*
+ * The staff-only "Super Admin Data" debug block adds a divider line beneath the
+ * footer text; centered against that (debug-inflated) text column, the logo lands
+ * below the line. Nudge it up so the line runs through the logo's middle — for
+ * both brands. The offset is height-independent: it moves the logo's centre to
+ * the line regardless of logo size (verified: the 26px PYD wordmark and the 92px
+ * WT mark both land dead-centre on the line). Gated to when the debug block is
+ * present, so the public footer is untouched; no-op where :has() is unsupported.
+ */
+.wt26-footer__inner:has(.wt26-footer__debug) .wt26-footer__logo {
+    position: relative;
+    top: -27px;
+}
+
+/*
+ * EDM affiliation band ("We are proud to be a part of…") — per-site staff
+ * toggle wt_options[wt_enable_edm_footer]. Light band directly above the dark
+ * footer block, echoing the legacy MyWTEDM look (Glory's .footer-widgets:
+ * #f2f2f2 with a hairline top border). The heading deliberately inherits the
+ * theme's font so the band matches each site, as the old version did.
+ */
+.wt26-footer-affiliations {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 48px 20px 40px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.wt26-footer-affiliations__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*
+ * SPECIFICITY, on the HEADING ONLY. Found live on greengrace.episcopalmaryland.org
+ * (Enfold, 2026-09-13): the band rendered its own light background with a WHITE
+ * heading on top of it, all but unreadable. Enfold's generated colour CSS ships
+ *     .socket_color .heading-color, … .socket_color h2, … { color: var(--enfold-socket-color-heading) }
+ * at (0,1,1) with that variable set to #ffffff, and this rule was only (0,1,0),
+ * so the theme took the heading while the band kept its own background. That is
+ * decided by specificity, not load order, so enqueue order could not have saved it.
+ *
+ * The class is doubled to clear single-class and class+element theme rules — the
+ * same treatment, and the same reasoning, as the .wt26-footer link rule above.
+ *
+ * 🔴 The BACKGROUND is deliberately left at a single class. It was never the rule
+ * that lost, and sites DO override it per-site: greengrace carries
+ * `.wt24_edm_footer_wrap { background-color: white }` in its Additional CSS from
+ * the legacy band. Doubling the background class here would silently outrank every
+ * such single-class override and break the one customer lever this band has.
+ */
+.wt26-footer-affiliations.wt26-footer-affiliations .wt26-footer-affiliations__title {
+    margin: 0 0 32px;
+    color: #333;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.wt26-footer-affiliations__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px 48px;
+}
+
+.wt26-footer-affiliations__logos a {
+    display: block;
+    flex: 0 1 300px;
+}
+
+.wt26-footer-affiliations__logos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .wt26-footer-affiliations__logos a {
+        flex-basis: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wt26-footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    /* Stacked layout has no side-by-side divider to align to; drop the nudge. */
+    .wt26-footer__inner:has(.wt26-footer__debug) .wt26-footer__logo {
+        top: 0;
+    }
+
+    .wt26-footer__logo {
+        flex: 0 0 110px;
+        width: 110px;
+    }
+}

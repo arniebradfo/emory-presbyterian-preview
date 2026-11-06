@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A welcoming, affirming community of faith in Atlanta. Join Emory Presbyterian Church for Sunday worship at 11 AM.">
+    <title>Emory Presbyterian Church | There's room for you here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="designs.css">
+    <script src="designs.js" defer></script>
+</head>
+<body data-design="warm">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="./" aria-label="Emory Presbyterian Church home">
+            <span class="brand-symbol" aria-hidden="true">e.</span>
+            <span>Emory<span class="brand-small">Presbyterian Church</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="#visit">I'm new</a>
+            <a href="https://emorypresbyterian.org/worship/">Worship</a>
+            <a href="#events">What's happening</a>
+            <a href="https://emorypresbyterian.org/give/">Give</a>
+        </nav>
+        <button class="menu-button" id="open-menu" aria-haspopup="dialog" aria-controls="design-menu">
+            <span class="menu-lines" aria-hidden="true"></span><span>Menu <span class="menu-extra">& designs</span></span>
+        </button>
+    </header>
+
+    <main id="main">
+        <noscript><section class="section wrap"><h1>There's room for you here.</h1><p>Join Emory Presbyterian Church on Sundays at 11 AM at 1886 North Decatur Road, Atlanta.</p><p>Enable JavaScript to compare the three homepage designs.</p><a href="original.html">View the original homepage snapshot</a></section></noscript>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div><a class="footer-brand" href="./">Emory Presbyterian Church</a><p>A place to belong. A faith to live out.</p></div>
+            <div><h2>Come as you are</h2><p>1886 North Decatur Rd<br>Atlanta, GA 30307</p><a href="https://www.google.com/maps/search/?api=1&query=Emory+Presbyterian+Church+Atlanta">Get directions <span aria-hidden="true">&nearr;</span></a></div>
+            <div><h2>Let's connect</h2><a href="mailto:office@emorypresbyterian.org">office@emorypresbyterian.org</a><a href="tel:+14043254551">404.325.4551</a><a href="https://www.instagram.com/emorypreschurch/">Instagram <span aria-hidden="true">&nearr;</span></a></div>
+        </div>
+        <div class="wrap footer-bottom"><span>&copy; 2026 Emory Presbyterian Church</span><span>Inclusive in spirit. Active in love.</span></div>
+    </footer>
+
+    <dialog id="design-menu" aria-labelledby="menu-title">
+        <div class="dialog-top"><span class="eyebrow">Explore the possibilities</span><button class="close-button" id="close-menu" aria-label="Close menu">&times;</button></div>
+        <h2 id="menu-title">One community.<br>Three ways to welcome.</h2>
+        <p class="menu-intro">Choose a homepage direction to explore.</p>
+        <div class="design-choices">
+            <button data-choice="warm"><span class="choice-number">01</span><span><strong>Warm welcome</strong><small>Inviting, familiar, and people-first.</small></span><span class="choice-arrow" aria-hidden="true">&nearr;</span></button>
+            <button data-choice="community"><span class="choice-number">02</span><span><strong>Community in action</strong><small>Bold, lively, and led by what's next.</small></span><span class="choice-arrow" aria-hidden="true">&nearr;</span></button>
+            <button data-choice="quiet"><span class="choice-number">03</span><span><strong>Quiet & confident</strong><small>Thoughtful, spacious, and beautifully simple.</small></span><span class="choice-arrow" aria-hidden="true">&nearr;</span></button>
+        </div>
+        <nav class="dialog-nav" aria-label="More navigation">
+            <a href="#visit">Plan a visit</a><a href="#events">Upcoming events</a>
+            <a href="https://emorypresbyterian.org/community/">Our community</a>
+            <a href="original.html">Original homepage</a>
+        </nav>
+        <p class="preview-note">Design exploration / Events use source-site information. Confirm dates and details on the church calendar.</p>
+    </dialog>
+
+    <template id="warm-template">
+        <section class="warm-hero wrap">
+            <div class="hero-copy"><p class="eyebrow">A little different. A lot of belonging.</p><h1>There's room<br>for <em>you</em> here.</h1><p class="hero-description">A welcoming, affirming church in Atlanta. Come with your questions, your hopes, and your whole self.</p><div class="actions"><a class="button" href="#visit">Plan your first visit <span aria-hidden="true">&nearr;</span></a><a class="text-link" href="https://vimeo.com/user109709615">Watch worship <span aria-hidden="true">&nearr;</span></a></div><p class="hero-detail"><span class="small-dot"></span>Sundays at 11 AM <span class="detail-divider">/</span> In the heart of Druid Hills</p></div>
+            <div class="hero-photo"><img src="https://emorypresbyterian.org/wp-content/uploads/sites/44/2023/06/EPC-sidewalk_crop-scaled.jpg" alt="Sunlit church windows and the garden path at Emory Presbyterian Church" fetchpriority="high"><div class="photo-caption"><span>A place for faith.<br>A place for you.</span><span aria-hidden="true">&nearr;</span></div></div>
+        </section>
+        <section class="welcome-band"><div class="wrap"><span class="eyebrow">Open hearts. Open doors.</span><p>We believe God's love makes room for everybody.<br><em>And everybody means you.</em></p></div></section>
+        <section class="section wrap" id="events"><div class="section-heading"><div><p class="eyebrow">Life together</p><h2>Good things are happening.</h2></div><a class="text-link" href="https://emorypresbyterian.org/calendar/">View the calendar <span aria-hidden="true">&nearr;</span></a></div><div class="event-cards" data-events="cards"></div></section>
+        <section class="visit-section wrap" id="visit"><div><p class="eyebrow">Your first Sunday</p><h2>New here?<br>You're already welcome.</h2></div><div><p>You don't need to have it all figured out. Join us for worship, meet a few friendly faces, and find your own way to belong.</p><p><strong>Sunday worship &middot; 11 AM</strong><br>1886 North Decatur Rd, Atlanta, GA 30307</p><a class="button" href="https://emorypresbyterian.org/worship/">What to expect <span aria-hidden="true">&nearr;</span></a></div></section>
+    </template>
+
+    <template id="community-template">
+        <section class="action-hero"><div class="wrap action-hero-grid"><div><p class="eyebrow">Emory Presbyterian / Atlanta, GA</p><h1>Faith isn't just<br>something we <em>believe.</em><br>It's something we <em>do.</em></h1><p class="hero-description">Worship together. Show up for our neighbors. Make room for one another. There's a place for you in all of it.</p><a class="button" href="#events">Find your next step <span aria-hidden="true">&darr;</span></a></div><aside class="sunday-card"><span class="eyebrow">Start here</span><span class="sunday-mark" aria-hidden="true">11<span>AM</span></span><h2>See you Sunday.</h2><p>Bring your whole self.<br>We'll save you a place.</p><a href="#visit">Join us for worship <span aria-hidden="true">&nearr;</span></a></aside></div></section>
+        <section class="section wrap" id="events"><div class="section-heading"><div><p class="eyebrow">Less scrolling. More showing up.</p><h2>Coming up at Emory.</h2></div><a class="text-link" href="https://emorypresbyterian.org/calendar/">All events <span aria-hidden="true">&nearr;</span></a></div><div class="action-events" data-events="featured"></div></section>
+        <section class="pathways-section"><div class="wrap"><p class="eyebrow">Find your people. Find your purpose.</p><h2>Make yourself part of it.</h2><div class="pathways"><a href="https://emorypresbyterian.org/worship/"><span>01 / Worship</span><h3>Pause. Reflect.<br>Begin again.</h3><span>Worship with us &nearr;</span></a><a href="https://emorypresbyterian.org/community/"><span>02 / Community</span><h3>Life is better<br>together.</h3><span>Find community &nearr;</span></a><a href="https://emorypresbyterian.org/mission-opportunities/"><span>03 / Service</span><h3>Put your faith<br>into motion.</h3><span>Explore ways to serve &nearr;</span></a></div></div></section>
+        <section class="visit-section wrap" id="visit"><div><p class="eyebrow">An open invitation</p><h2>Your next step<br>can be this Sunday.</h2></div><div><p>We're an inclusive community sharing God's love and living out our faith as a Matthew 25 Church.</p><p><strong>Worship every Sunday at 11 AM</strong><br>1886 North Decatur Rd, Atlanta, GA 30307</p><div class="actions"><a class="button" href="https://emorypresbyterian.org/worship/">Plan a visit <span aria-hidden="true">&nearr;</span></a><a class="text-link" href="https://vimeo.com/user109709615">Watch online &nearr;</a></div></div></section>
+    </template>
+
+    <template id="quiet-template">
+        <section class="quiet-hero wrap"><p class="eyebrow">Emory Presbyterian Church &middot; Atlanta</p><h1>Faith. Community.<br>Room for <em>everybody.</em></h1><p>A place to ask questions, grow in faith,<br>and practice a little more love in the world.</p><a class="button" href="#visit">Join us Sunday <span aria-hidden="true">&nearr;</span></a><span class="quiet-service">11 AM / 1886 North Decatur Road</span><div class="quiet-line" aria-hidden="true"><span>Rooted in faith. Open to you.</span></div></section>
+        <section class="quiet-events section wrap" id="events"><div class="section-heading"><div><p class="eyebrow">Gather with us</p><h2>On the horizon.</h2></div><a class="text-link" href="https://emorypresbyterian.org/calendar/">Full calendar &nearr;</a></div><div data-events="list"></div></section>
+        <section class="quiet-about wrap" id="visit"><img src="https://emorypresbyterian.org/wp-content/uploads/sites/44/2023/06/EPC-sidewalk_crop-scaled.jpg" alt="The church garden and stone facade at Emory Presbyterian" loading="lazy"><div><p class="eyebrow">A community with open doors</p><h2>Come as you are.<br>Become who you're<br>called to be.</h2><p>We're a friendly, affirming congregation. We support each other, serve our neighbors, and make space for the journey of faith.</p><p><strong>Sunday worship at 11 AM</strong><br>1886 North Decatur Rd, Atlanta, GA 30307</p><a class="text-link" href="https://emorypresbyterian.org/worship/">A little more about Sundays <span aria-hidden="true">&nearr;</span></a></div></section>
+    </template>
+</body>
+</html>

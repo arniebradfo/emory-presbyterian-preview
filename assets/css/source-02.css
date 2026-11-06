@@ -1,0 +1,80 @@
+/*
+ * Social Media module frontend styles.
+ * Ports the live selectors from the legacy wt-social style.css so migrated
+ * layouts keep rendering; icon files are SVG now, sized to the legacy 64px.
+ */
+
+/* Icon widget. No size rule on purpose: the imgs carry width/height="64"
+   attributes (the legacy PNGs' natural size), which — like natural size —
+   lose to any site CSS that resized the icons. A CSS rule here would win
+   over lower-specificity site rules and change migrated layouts. */
+
+/* Spacing between icons: the legacy rounded-tile PNGs read fine nearly
+   adjacent, but the new bare SVG glyphs need a real gap.
+   
+   SPECIFICITY, and why the gap never actually appeared: this rule used to be
+   wrapped in :where(), i.e. specificity (0,0,0). Every Genesis child theme in
+   the fleet ships an Eric-Meyer-style reset that lists a bare `img` among a
+   long element selector and zeroes its margin — specificity (0,0,1), which
+   beats (0,0,0). So the gap lost on EVERY reset-carrying theme and the icons
+   rendered edge to edge. Measured on wt-cornerstone 2.0.0
+   (unitypresbyterianchurch.org, 2026-08-05): computed margin 0px, and 0px
+   between the Facebook and YouTube glyphs.
+   
+   Scoped to the widget's own container instead — high enough to clear an
+   element reset, and confined to our own markup so it cannot reach an icon a
+   site styles elsewhere. The widget is the only thing that emits these imgs
+   (wt26_social_icon_img() has exactly one caller, widgets.php), so this
+   covers every rendered icon. A site that wants different spacing overrides
+   with the same two-class selector. */
+.wtnet_icon_holder img.wtnet_socai_icon {
+    margin: 0 12px 12px 0;
+    vertical-align: middle;
+}
+
+#sidebar img.wtnet_socai_icon {
+    float: left;
+}
+
+.wtnet_icon_holder .wt_icon_grey {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.wtnet_clear {
+    clear: both;
+}
+
+/* X (Twitter) feed embeds */
+.twitter-timeline {
+    width: 100% !important;
+}
+
+/* Facebook embeds (Page Plugin / video) */
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+    background-color: #ffffff;
+}
+
+/* YouTube video + live chat */
+.wt_youtube_player iframe,
+.wt_youtube_chat iframe {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Ustream / IBM Video */
+.wt_ustream {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Clear helpers emitted by the shortcodes */
+.wt_clear,
+.pyd_clear,
+.wtclear,
+.pydclear {
+    clear: both;
+}
