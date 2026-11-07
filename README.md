@@ -16,6 +16,79 @@ bookmarked and browser Back/Forward works.
 This is an unofficial design exploration, not the church's live website.
 GitHub Pages publishes the root of the `main` branch.
 
+## The three design options
+
+The original proposal was to shift the homepage from **"show everything"** to
+**"help people take their next step."** Each direction uses fewer photos,
+shorter text, clearer actions, and an events section near the top.
+These descriptions preserve the original design suggestions; the live previews
+show how each direction was developed.
+
+### 1. Warm welcome
+
+**Best for attracting first-time visitors.**
+
+- One strong church photo with the headline **"There's room for you here."**
+- Service time and location directly below.
+- Two main actions: **Plan Your Visit** and **Watch Worship**.
+- Three upcoming events, each with a date, short description, and clear action.
+- A brief welcome statement instead of the original long introduction.
+
+**Style:** Warm ivory, deep plum, dark text, and generous spacing. Elegant
+headings and simple, readable body text.
+
+[Explore Warm welcome](https://arniebradfo.github.io/emory-presbyterian-preview/?design=warm)
+
+### 2. Community in action
+
+**Best for showing an active church and encouraging participation.**
+
+- A compact welcome area with one small photo, or no photo.
+- **"Coming up at Emory"** becomes the main feature.
+- One featured event with a prominent button, followed by two smaller events.
+- Three simple next steps: **Worship With Us**, **Find Community**, and
+  **Serve a Neighbor**.
+- A short statement about inclusion and faith.
+
+**Style:** White backgrounds, teal and plum accents, bold headings, and clean
+event cards with large date markers. The live version develops this direction
+with teal and soft green tones and no photos.
+
+[Explore Community in action](https://arniebradfo.github.io/emory-presbyterian-preview/?design=community)
+
+### 3. Quiet and confident
+
+**Best for the cleanest, least cluttered design.**
+
+- A text-led opening: **"Faith. Community. Room for everybody."**
+- Service details and **Join Us Sunday** as the main action.
+- A compact upcoming-events list rather than image-heavy cards.
+- One photo farther down, paired with a short introduction.
+- A simpler footer with contact details and a **Get Directions** link instead
+  of a large map.
+
+**Style:** Soft cream, charcoal, restrained plum accents, fine dividers, and
+large typography.
+
+[Explore Quiet & confident](https://arniebradfo.github.io/emory-presbyterian-preview/?design=quiet)
+
+### Original recommendation
+
+**Option 1, with Option 2's event layout.** This combination welcomes new
+visitors while making church activity easy to find.
+
+For all three directions:
+
+- Replace event graphics with readable text and dates.
+- Use specific actions such as **View Details**, **Volunteer**, or **Register**,
+  where appropriate and supported by the event.
+- Show only the next three events, plus **View All Events**.
+- Remove repeated photos and oversized sections.
+- Keep worship time visible without scrolling.
+
+These are design goals, not a live event schedule. The previews use source-site
+information and link to the church calendar to confirm event details.
+
 ## Run locally
 
 From this directory, run:
